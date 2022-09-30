@@ -1,3 +1,5 @@
+/* Typography */
+
 :root {
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
@@ -54,4 +56,30 @@ h3 {
   h3 {
     font-size: 2.4rem;
   }
-} ;
+}
+
+/* Link */
+
+a {
+  font-size: 2rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
