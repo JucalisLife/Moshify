@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 /* Typography */
 
 :root {
@@ -46,6 +52,7 @@ h3 {
   body {
     font-size: 1.8rem;
   }
+
   h1 {
     font-size: 8rem;
   }
@@ -53,6 +60,7 @@ h3 {
   h2 {
     font-size: 4rem;
   }
+
   h3 {
     font-size: 2.4rem;
   }
@@ -99,7 +107,7 @@ a {
   color: #fff;
 }
 
-..badge--secondary {
+.badge--secondary {
   background-color: var(--color-secondary);
   color: #fff;
 }
@@ -112,7 +120,121 @@ a {
   .badge {
     font-size: 1.5rem;
   }
+
   .badge--small {
     font-size: 1.2rem;
+  }
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-headings);
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+.list--tick {
+  list-style-image: url(../images/tick.svg);
+  padding-left: 3rem;
+}
+
+.list--tick .list__item {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
+}
+
+/* Icons */
+
+.icon {
+  height: 40px;
+  width: 40px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon-container {
+  background-color: #f3f9fa;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+
+.button {
+  padding: 2rem 3rem;
+  border: 0;
+  border-radius: 40px;
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.button--primary:hover {
+  background: #3a8ffd;
+}
+
+.button--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.button--secondary:hover {
+  background: #00c8eb;
+}
+
+.button--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.button--accent:hover {
+  background: #ec3000;
+}
+
+.button--block {
+  width: 100%;
+  display: inline-block;
+}
+
+.button--outline {
+  background: #fff;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+
+.button--outline:hover {
+  background: var(--color-headings);
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .button {
+    font-size: 1.5rem;
   }
 }
