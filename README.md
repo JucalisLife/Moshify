@@ -9,7 +9,6 @@ Moshify is the landing page of a fictional cloud hosting service built using HTM
 
 - HTML
 - CSS
-- JavaScript
 
 ## Usage
 Follow the following steps in order to run Moshify locally:
